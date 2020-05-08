@@ -13,8 +13,10 @@ const soulution = (num) => {
     stringSet += i;
   }
 
-  for (s of stringSet) {
-    if (s === "1") {
+  // for in 은 key값에 접근한다.
+  // for of 는 iterator 속성을 가지는 컬렉션의 value값에 접근한다.
+  for (idx in stringSet) {
+    if (stringSet[idx] === "1") {
       answer++;
     }
   }
