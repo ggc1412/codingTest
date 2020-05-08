@@ -1,4 +1,6 @@
-## CODING TEST
+### Coding Test 기록
 
-- JavaScript로 작성한 Coding Test 기록
-- 프로그래머스
+#### 문제 출처
+
+- 프로그래머스 :pray:
+- JS 100제 :100:

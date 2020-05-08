@@ -6,13 +6,16 @@
 
 const soulution = (num) => {
   let answer = 0;
+  let stringSet = "";
 
+  // 이중 for문은 가급적 쓰지 않는 것이 속도에 좋다.
   for (let i = 0; i <= num; i++) {
-    const arr = i.toString();
-    for (a of arr) {
-      if (a === "1") {
-        answer++;
-      }
+    stringSet += i;
+  }
+
+  for (s of stringSet) {
+    if (s === "1") {
+      answer++;
     }
   }
 
