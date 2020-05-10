@@ -24,6 +24,26 @@ const graph = {
 const search = (graph, start) => {
   let visit = [];
   let stack = [start];
+
+  while (stack.length > 0) {
+    let node = stack.pop();
+    visit.push(node);
+
+    // visit에 있는 것을 빼줘야 함
+    let diff = new Set(graph[node]);
+    for (let elem of visit) {
+      diff.delete(elem);
+    }
+    if (diff.size !== 0) {
+      let min = Math.min(...diff);
+      stack.push(min);
+    }
+    console.log(visit, stack);
+  }
+
+  const char = String.fromCharCode(...visit);
+
+  return char;
 };
 
 console.log(search(graph, 100));
